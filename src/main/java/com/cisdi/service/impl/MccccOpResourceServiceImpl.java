@@ -13,6 +13,8 @@ import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 
+import static com.cisdi.Enums.constant.UploadFileConstant.RESOURCE_TITLE;
+
 /**
 * @author Heyinqing
 * @description 针对表【obs_op_resource】的数据库操作Service实现
@@ -33,7 +35,7 @@ public class MccccOpResourceServiceImpl implements MccccOpResourceService {
         Field[] fields = MccccOpResourceEntity.class.getDeclaredFields();
         for (int i = 4;i<35;i++){
             String[] split = values.get(i).split(",");
-            if (Arrays.asList("18","19","20","21").contains(split[0])){
+            if (RESOURCE_TITLE.contains(split[0])){
                 continue;
             }
             MccccOpResourceEntity resourceEntity = new MccccOpResourceEntity();

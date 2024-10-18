@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.annotation.Resource;
-import java.io.IOException;
 
 /**
  * @author Heyinqing
@@ -18,7 +17,7 @@ import java.io.IOException;
 
 @RestController
 @RequestMapping("/file")
-public class FileUploadController {
+public class FileUploadApi {
 
     @Resource
     private FileUploadService fileUploadService;

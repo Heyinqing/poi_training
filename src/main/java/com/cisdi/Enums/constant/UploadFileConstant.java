@@ -9,6 +9,7 @@ import java.util.List;
  */
 public interface UploadFileConstant {
 
+    List<String> RESOURCE_TITLE = Arrays.asList("18","19","20","21");
     List<String> MONTH_YIEID_TITLE = Arrays.asList("8","13","18","38","43");
     List<String> TECH_ECON_INDICATORS_TITLE = Arrays.asList("6","13","19");
 }
