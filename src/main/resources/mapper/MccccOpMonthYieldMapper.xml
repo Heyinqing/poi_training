@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cisdi.mapper.MccccOpMonthYieldMapper">
+
+    <resultMap id="BaseResultMap" type="com.cisdi.entity.MccccOpMonthYieldEntity">
+            <id property="id" column="id" jdbcType="INTEGER"/>
+            <result property="reportingTime" column="reporting_time" jdbcType="VARCHAR"/>
+            <result property="informant" column="informant" jdbcType="VARCHAR"/>
+            <result property="fillingTime" column="filling_time" jdbcType="TIMESTAMP"/>
+            <result property="projCode" column="proj_code" jdbcType="VARCHAR"/>
+            <result property="projName" column="proj_name" jdbcType="VARCHAR"/>
+            <result property="lineNumber" column="line_number" jdbcType="INTEGER"/>
+            <result property="classify" column="classify" jdbcType="VARCHAR"/>
+            <result property="unit" column="unit" jdbcType="VARCHAR"/>
+            <result property="monthPlan" column="month_plan" jdbcType="VARCHAR"/>
+            <result property="monthActualCom" column="month_actual_com" jdbcType="VARCHAR"/>
+            <result property="finishingRate" column="finishing_rate" jdbcType="DECIMAL"/>
+            <result property="yoyFinishingRate" column="yoy_finishing_rate" jdbcType="VARCHAR"/>
+            <result property="yearlyBestValue" column="yearly_best_value" jdbcType="VARCHAR"/>
+            <result property="annualPlan" column="annual_plan" jdbcType="DECIMAL"/>
+            <result property="currentYearTotal" column="current_year_total" jdbcType="VARCHAR"/>
+            <result property="planCompletionRate" column="plan_completion_rate" jdbcType="DECIMAL"/>
+            <result property="lastYearTotal" column="last_year_total" jdbcType="VARCHAR"/>
+            <result property="cumulativeOutput" column="cumulative_output" jdbcType="DECIMAL"/>
+            <result property="remark" column="remark" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,reporting_time,informant,
+        filling_time,proj_code,porj_name,
+        line_number,classify,unit,
+        month_plan,month_actual_com,finishing_rate,
+        yoy_finishing_rate,yearly_best_value,annual_plan,
+        current_year_total,plan_completion_rate,last_year_total,
+        cumulative_output,remark
+    </sql>
+</mapper>

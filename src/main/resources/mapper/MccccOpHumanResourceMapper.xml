@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cisdi.mapper.MccccOpHumanResourceMapper">
+
+    <resultMap id="BaseResultMap" type="com.cisdi.entity.MccccOpHumanResourceEntity">
+            <id property="id" column="id" jdbcType="INTEGER"/>
+            <result property="reportingTime" column="reporting_time" jdbcType="VARCHAR"/>
+            <result property="informant" column="informant" jdbcType="VARCHAR"/>
+            <result property="fillingTime" column="filling_time" jdbcType="TIMESTAMP"/>
+            <result property="projCode" column="proj_code" jdbcType="VARCHAR"/>
+            <result property="projName" column="proj_name" jdbcType="VARCHAR"/>
+            <result property="lineNumber" column="line_number" jdbcType="INTEGER"/>
+            <result property="dept" column="dept" jdbcType="VARCHAR"/>
+            <result property="initialCount" column="initial_count" jdbcType="INTEGER"/>
+            <result property="endMonthCount" column="end_month_count" jdbcType="INTEGER"/>
+            <result property="cnAnnualQuota" column="cn_annual_quota" jdbcType="INTEGER"/>
+            <result property="cnEndMonthCount" column="cn_end_month_count" jdbcType="INTEGER"/>
+            <result property="cnOnSite" column="cn_on_site" jdbcType="INTEGER"/>
+            <result property="cnReturned" column="cn_returned" jdbcType="INTEGER"/>
+            <result property="cnNewHires" column="cn_new_hires" jdbcType="INTEGER"/>
+            <result property="returneesResigned" column="returnees_resigned" jdbcType="INTEGER"/>
+            <result property="returneesLeaveMonth" column="returnees_leave_month" jdbcType="INTEGER"/>
+            <result property="returneesLeaveCross" column="returnees_leave_cross" jdbcType="INTEGER"/>
+            <result property="returneesOther" column="returnees_other" jdbcType="INTEGER"/>
+            <result property="foreignAnnualQuota" column="foreign_annual_quota" jdbcType="INTEGER"/>
+            <result property="foreignEndMonthCount" column="foreign_end_month_count" jdbcType="INTEGER"/>
+            <result property="foreignOnSite" column="foreign_on_site" jdbcType="INTEGER"/>
+            <result property="foreignNewHires" column="foreign_new_hires" jdbcType="INTEGER"/>
+            <result property="foreignResigned" column="foreign_resigned" jdbcType="INTEGER"/>
+            <result property="foreignTemp" column="foreign_temp" jdbcType="INTEGER"/>
+            <result property="remark" column="remark" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,reporting_time,informant,
+        filling_time,proj_code,proj_name,
+        line_number,dept,initial_count,
+        end_month_count,cn_annual_quota,cn_end_month_count,
+        cn_on_site,cn_returned,cn_new_hires,
+        returnees_resigned,returnees_leave_month,returnees_leave_cross,
+        returnees_other,foreign_annual_quota,foreign_end_month_count,
+        foreign_on_site,foreign_new_hires,foreign_resigned,
+        foreign_temp,remark
+    </sql>
+</mapper>

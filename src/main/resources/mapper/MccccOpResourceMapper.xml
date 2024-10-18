@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cisdi.mapper.MccccOpResourceMapper">
+
+    <resultMap id="BaseResultMap" type="com.cisdi.entity.MccccOpResourceEntity">
+            <id property="id" column="id" jdbcType="INTEGER"/>
+            <result property="reportingTime" column="reporting_time" jdbcType="VARCHAR"/>
+            <result property="informant" column="informant" jdbcType="VARCHAR"/>
+            <result property="fillingTime" column="filling_time" jdbcType="TIMESTAMP"/>
+            <result property="projCode" column="proj_code" jdbcType="VARCHAR"/>
+            <result property="projName" column="proj_name" jdbcType="VARCHAR"/>
+            <result property="lineNumber" column="line_number" jdbcType="INTEGER"/>
+            <result property="mineralReserveType" column="mineral_reserve_type" jdbcType="VARCHAR"/>
+            <result property="reserveQuantityType" column="reserve_quantity_type" jdbcType="VARCHAR"/>
+            <result property="midsection" column="midsection" jdbcType="VARCHAR"/>
+            <result property="oreVolume" column="ore_volume" jdbcType="DECIMAL"/>
+            <result property="leadGrade" column="lead_grade" jdbcType="DECIMAL"/>
+            <result property="zincGrade" column="zinc_grade" jdbcType="DECIMAL"/>
+            <result property="leadContent" column="lead_content" jdbcType="DECIMAL"/>
+            <result property="zincContent" column="zinc_content" jdbcType="DECIMAL"/>
+            <result property="remark" column="remark" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,reporting_time,informant,
+        filling_time,proj_code,porj_name,
+        line_number,mineral_reserve_type,reserve_quantity_type,
+        midsection,ore_volume,lead_grade,
+        zinc_grade,lead_content,zinc_content,
+        remark
+    </sql>
+</mapper>

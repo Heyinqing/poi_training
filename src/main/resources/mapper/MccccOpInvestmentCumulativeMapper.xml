@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cisdi.mapper.MccccOpInvestmentCumulativeMapper">
+
+    <resultMap id="BaseResultMap" type="com.cisdi.entity.MccccOpInvestmentCumulativeEntity">
+            <id property="id" column="id" jdbcType="INTEGER"/>
+            <result property="reportingTime" column="reporting_time" jdbcType="VARCHAR"/>
+            <result property="informant" column="informant" jdbcType="VARCHAR"/>
+            <result property="fillingTime" column="filling_time" jdbcType="TIMESTAMP"/>
+            <result property="projCode" column="proj_code" jdbcType="VARCHAR"/>
+            <result property="projName" column="proj_name" jdbcType="VARCHAR"/>
+            <result property="lineNumber" column="line_number" jdbcType="INTEGER"/>
+            <result property="totalInvestment" column="total_investment" jdbcType="DECIMAL"/>
+            <result property="actualInvestment" column="actual_investment" jdbcType="DECIMAL"/>
+            <result property="totalCompletionPct" column="total_completion_pct" jdbcType="DECIMAL"/>
+            <result property="annualPlanInvestment" column="annual_plan_investment" jdbcType="DECIMAL"/>
+            <result property="yearlyCumulativeInvestment" column="yearly_cumulative_investment" jdbcType="DECIMAL"/>
+            <result property="annualCompletionPercentage" column="annual_completion_percentage" jdbcType="DECIMAL"/>
+            <result property="remark" column="remark" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,reporting_time,informant,
+        filling_time,proj_code,proj_name,
+        line_number,total_investment,actual_investment,
+        total_completion_pct,annual_plan_investment,yearly_cumulative_investment,
+        annual_completion_percentage,remark
+    </sql>
+</mapper>

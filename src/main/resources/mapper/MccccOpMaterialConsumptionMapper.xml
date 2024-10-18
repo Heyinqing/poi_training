@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cisdi.mapper.MccccOpMaterialConsumptionMapper">
+
+    <resultMap id="BaseResultMap" type="com.cisdi.entity.MccccOpMaterialConsumptionEntity">
+            <id property="id" column="id" jdbcType="INTEGER"/>
+            <result property="reportingTime" column="reporting_time" jdbcType="VARCHAR"/>
+            <result property="informant" column="informant" jdbcType="VARCHAR"/>
+            <result property="fillingTime" column="filling_time" jdbcType="TIMESTAMP"/>
+            <result property="projCode" column="proj_code" jdbcType="VARCHAR"/>
+            <result property="projName" column="proj_name" jdbcType="VARCHAR"/>
+            <result property="lineNumber" column="line_number" jdbcType="INTEGER"/>
+            <result property="classify" column="classify" jdbcType="VARCHAR"/>
+            <result property="unit" column="unit" jdbcType="VARCHAR"/>
+            <result property="monthPlan" column="month_plan" jdbcType="VARCHAR"/>
+            <result property="monthActualCom" column="month_actual_com" jdbcType="VARCHAR"/>
+            <result property="subItemName" column="sub_item_name" jdbcType="VARCHAR"/>
+            <result property="subItemValue" column="sub_item_value" jdbcType="DECIMAL"/>
+            <result property="parentItemName" column="parent_item_name" jdbcType="VARCHAR"/>
+            <result property="parentItemValue" column="parent_item_value" jdbcType="DECIMAL"/>
+            <result property="annualPlan" column="annual_plan" jdbcType="DECIMAL"/>
+            <result property="currentYearCumulative" column="current_year_cumulative" jdbcType="DECIMAL"/>
+            <result property="lastYearPlan" column="last_year_plan" jdbcType="DECIMAL"/>
+            <result property="lastYearActual" column="last_year_actual" jdbcType="DECIMAL"/>
+            <result property="bestHistorical" column="best_historical" jdbcType="DECIMAL"/>
+            <result property="remark" column="remark" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,reporting_time,informant,
+        filling_time,proj_code,proj_name,
+        line_number,classify,unit,
+        month_plan,month_actual_com,sub_item_name,
+        sub_item_value,parent_item_name,parent_item_value,
+        annual_plan,current_year_cumulative,last_year_plan,
+        last_year_actual,best_historical,remark
+    </sql>
+</mapper>

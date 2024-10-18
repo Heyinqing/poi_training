@@ -1,0 +1,19 @@
+server:
+  port: 80
+spring:
+  #配置数据源
+  datasource:
+    url: jdbc:mysql://localhost:3306/华冶?characterEncoding=UTF-8&useSSL=false&serverTimezone=Asia/Shanghai
+    username: root
+    password: 123456
+#mybatis-plusl
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl #开启sql日志
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.cisdi.entity
+  global-config:
+    db-config:
+      logic-delete-field: isDeleted
+      logic-delete-value: 1
+      logic-not-delete-value: 0

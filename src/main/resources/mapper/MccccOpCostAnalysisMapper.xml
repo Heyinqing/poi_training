@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cisdi.mapper.MccccOpCostAnalysisMapper">
+
+    <resultMap id="BaseResultMap" type="com.cisdi.entity.MccccOpCostAnalysisEntity">
+            <id property="id" column="id" jdbcType="INTEGER"/>
+            <result property="reportingTime" column="reporting_time" jdbcType="VARCHAR"/>
+            <result property="informant" column="informant" jdbcType="VARCHAR"/>
+            <result property="fillingTime" column="filling_time" jdbcType="TIMESTAMP"/>
+            <result property="projCode" column="proj_code" jdbcType="VARCHAR"/>
+            <result property="projName" column="proj_name" jdbcType="VARCHAR"/>
+            <result property="lineNumber" column="line_number" jdbcType="INTEGER"/>
+            <result property="serialNumber" column="serial_number" jdbcType="VARCHAR"/>
+            <result property="costItem" column="cost_item" jdbcType="VARCHAR"/>
+            <result property="unit" column="unit" jdbcType="VARCHAR"/>
+            <result property="dataItemTime" column="data_item_time" jdbcType="VARCHAR"/>
+            <result property="timeType" column="time_type" jdbcType="VARCHAR"/>
+            <result property="planActual" column="plan_actual" jdbcType="VARCHAR"/>
+            <result property="dataValue" column="data_value" jdbcType="DECIMAL"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,reporting_time,informant,
+        filling_time,proj_code,proj_name,
+        line_number,serial_number,cost_item,
+        unit,data_item_time,time_type,
+        plan_actual,data_value
+    </sql>
+</mapper>
