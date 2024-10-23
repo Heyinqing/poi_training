@@ -228,7 +228,7 @@ public class ExcelUtil {
      * @author Heyinqing
      * @date: 2024/8/5 11:20
      */
-    public static Map<Integer, List<String>> getData(Workbook workbook) throws IllegalAccessException {
+    public static Map<Integer, List<String>> getData(Workbook workbook) {
         Map<Integer, List<String>> map = new HashMap<>();
         Sheet sheet = null;
         StringBuilder titleName = new StringBuilder();
@@ -276,9 +276,6 @@ public class ExcelUtil {
                     cell = row.getCell(k);
                     // 必填项
                     if (cell == null) {
-                        // if (k < 5) {
-                        //     titleName.append(ExcelUtil.getCellValue(titleRow.getCell(k))).append(" ");
-                        // }
                         continue;
                     }
                     Object cellValue = ExcelUtil.getCellValue(cell);

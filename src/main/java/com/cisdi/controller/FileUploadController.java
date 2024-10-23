@@ -17,7 +17,7 @@ import javax.annotation.Resource;
 
 @RestController
 @RequestMapping("/file")
-public class FileUploadApi {
+public class FileUploadController {
 
     @Resource
     private FileUploadService fileUploadService;
